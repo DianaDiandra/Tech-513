@@ -2,6 +2,10 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+<<<<<<< HEAD
+=======
+.kotlin
+>>>>>>> 8a75df2 (01-RefactoringUnitTesting)
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
