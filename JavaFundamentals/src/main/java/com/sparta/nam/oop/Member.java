@@ -40,4 +40,13 @@ public class Member {
     public long getMemberDays(){
         return joinDate.until(LocalDate.now(), ChronoUnit.DAYS);
     }
+
+    @Override
+    public String toString() {
+        return getFullName() + " has been a member for " +getMemberDays() + " days.";
+    }
+
+    public static int add(int a, int b){
+        return a + b;
+    }
 }

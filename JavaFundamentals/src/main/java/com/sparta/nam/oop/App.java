@@ -1,5 +1,8 @@
 package com.sparta.nam.oop;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public static void main(String[] args) {
         Member m1 = new Member("Nish", "Mandal", 1999,5,15);
@@ -22,6 +25,17 @@ public class App {
         System.out.println(nahisah.getPosition());
         nahisah.setPosition("Goalie");
         System.out.println(nahisah.getPosition());
+        System.out.println();
+        System.out.println(nahisah.toString()); // Baseball Member
+        System.out.println(m1); // Member
+
+
+        ArrayList<Member> members = new ArrayList<>(List.of(m1, m2, nahisah));
+        for(Member member : members){
+            System.out.println(member);
+        }
+
+        Member aiden = new BaseballMember("Aiden", "Farthing", 2022,12,6, "quarterback");
 
 
 
