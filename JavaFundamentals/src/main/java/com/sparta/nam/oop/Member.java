@@ -2,8 +2,9 @@ package com.sparta.nam.oop;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 
-public class Member {
+public class Member implements Movable, Talkable {
 
     protected final String firstName;
     private String lastName;
@@ -48,5 +49,28 @@ public class Member {
 
     public static int add(int a, int b){
         return a + b;
+    }
+
+    @Override
+    public String move() {
+        return "I am moving as a Member";
+    }
+
+    @Override
+    public String talk() {
+        return "Hello";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(! (obj instanceof Member member)) return false;
+        return Objects.equals(firstName, member.firstName)
+                && Objects.equals(lastName, member.lastName)
+                && Objects.equals(joinDate, member.joinDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, joinDate);
     }
 }
