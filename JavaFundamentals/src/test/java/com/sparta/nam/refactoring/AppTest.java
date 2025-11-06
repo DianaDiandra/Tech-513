@@ -68,7 +68,7 @@ public class AppTest {
             "Good evening!, 21"
     })
     @DisplayName("getGreeting, when given a time, returns appropriate greeting")
-    public void givenATime_Greeting_ReturnsAnAppropriateGreeting(String greeting, int time){
+    public void Greeting_GivenTime_ReturnsAnAppropriateGreeting(String greeting, int time){
         Assertions.assertEquals(greeting, App.getGreeting(time));
     }
 
